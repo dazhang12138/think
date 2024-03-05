@@ -169,7 +169,9 @@ export const Tocs: React.FC<{ editor: Editor; getContainer: () => HTMLElement }>
                   href={`#${toc.id}`}
                   title={
                     <Tooltip key={toc.text} content={toc.text} position="right">
-                      <span className={styles.dot}>●</span>
+                      {/*2024-03-05 设置 超宽模式下 侧边目录显示名称 并设置字号12px*/}
+                      {/*<span className={styles.dot}>●</span>*/}
+                      <span className={styles.dot}>{toc.text}</span>
                     </Tooltip>
                   }
                 />
